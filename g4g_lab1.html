@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>GEOPHYSICS-4-GLASGOW Lab 1</title>
+<link href="css/g4g_style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="geoimages/long_logo1.png" alt="Lab 1" name="CornerLogo" width="960" height="90" id="Insert_logo" style="background: #FFFFFF; display:block;" /></a> 
+    <!-- end .header --></div>
+  <!--<div class="sidebar1">-->
+  <div STYLE="float: left; width: 180px; background: #8AB8E6; padding-bottom: 6600px">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="g4g_lab1.html">Lab 1</a></li>
+      <li><a href="g4g_lab2.html">Lab 2</a></li>
+      <li><a href="g4g_lab3.html">Lab 3</a></li>
+      <li><a href="g4g_lab4.html">Lab 4</a></li>
+      <li><a href="g4g_lab5.html">Lab 5</a></li>
+    </ul>
+    <p> Click the menu above to navigate to resources for each Lab session. You will be able to download (click the appropriate icons on the top right) a pdf of the Lab notes and any Excel spreadsheet templates and/or solutions for each of the Lab sessions.</p>
+    <p> Please also read the relevant sections from the recommended reading as well as using these help pages for each Lab session.</p>
+    <!-- end .sidebar1 --></div>
+
+ 
+ <div class="content">
+     
+<!-- image rollover code by http://saypoint.blogspot.com 
+<a href="#" ><img src=" URL_IMG-1 " onmouseover="this.src=' URL_IMG-2 '" onmouseout="this.src=' URL_IMG-1' "  /></a>
+end rollover template -->
+    
+    <div class="fltrt">
+    <table width="209">
+      <tr>
+        <td width="71"><a href="lab1/Geophysics_Lab1_2014.pdf" target="_blank" ><img src="candy/PDF-Icon.png" onmouseover="this.src='candy/PDF-download.png'" onmouseout="this.src='candy/PDF-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+        <td width="122"><a href="lab1/gravity_corrections_calc.pdf" target="_blank"><img src="candy/PDF-Icon.png" onmouseover="this.src='candy/PDF-download.png'" onmouseout="this.src='candy/PDF-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+      </tr>
+      <tr>
+        <td><i>Lab notes</i></td>
+        <td><i>Answer template</i></td>
+      </tr>
+    </table>
+     
+    <!-- end .fltrt --></div>
+    
+    <h1>Lab 1</h1><br>
+    <h2>&nbsp;</h2>
+    <h2>Gravity Measurements: Making Corrections and Calculating Anomalies</h2>
+<p><img src="lab1/gravity_corrections.jpg" width="580" height="220" alt="gravity corrections cartoon" /></p>
+    <p>This laboratory session has two main objectives. The first is to become familiar, if not expert, with using Excel to perform calculations using formulae and to plot the results using simple x-y graphs. The second objective is to become familiar with, and to be able to apply, the formulae used to correct field based gravity measurements.</p> 
+    <p>If you have never used Excel before, or need to brush up on formula syntax and graph plotting tricks, you might benefit from reviewing some of the online <a href="http://office.microsoft.com/en-gb/excel-help/training-courses-for-excel-2013-HA104032083.aspx" target="_blank">training video tutorials<a>.</p>
+     </p>
+     <p>
+     There are three key formulae;
+     <ul>
+      <li>The <a href="https://en.wikipedia.org/wiki/Theoretical_gravity">Theoretical Gravity Formula</a> (there are several, but we will use a well established one given in Nagy, 1978) to calculate the theoretical "standard" gravity value for the station latitude.<br />
+        <br />
+Nagy, D., 1978, Direct gravity formula for the Geodetic Reference System 1967, Bulletin of Geodesy, v52, p159-164. (<a href="https://link.springer.com/article/10.1007/BF02521696">download link)</a><br />
+<br />
+      </li>
+      <li>The <a href="http://epsc.wustl.edu/~epsc454/grav-corrections.html">Free Air Correction</a>-to adjust for height above the reference ellipsoid (spheroid really, as the Earth model is the 3D shape produced by rotation of the 2D ellipsoid). </li><br />
+      <li><a href="http://epsc.wustl.edu/~epsc454/grav-corrections.html">The Bouguer Correction</a>-to adjust for the mass of rock forming the topography (for land based stations) and/or the difference in mass between sea water and rock (for ocean stations).</li>
+     </ul>
+    </p>
+  <!-- end .content --></div>
+       
+       <div class="sidebar2">
+       <h3>Reading</h3>
+       <p>Lillie, <i>Whole Earth Geophysics</i>, <a href="reading/Lillie_Chp8and9.pdf" target="_blank">Chapter 8</a> Gravity & Isostasy, p. 226-237.</p>
+       <!-- end .sidebar2 --></div>
+       
+  <div class="content">
+    <h2>Task 1</h2>
+    <p><i>Calculate the theroretical gravity value (in mGal) using the 1967 Theoretical Gravity Formula for a series of points on Earth, 5 degrees of latitude apart, from the equator to the north pole (so every 5 degrees from 0 degrees latitude North to 90 degrees latitude North).</p>
+    </i>
+    <p>The key to this task is understanding how to enter a formula to calculate a value by refering to other values stored within the cells of one column and to store the result in an adjacent column. If you are unfamiliar with how to do this in Excel, this is a very helpful tutorial to refer to: <a href="http://office.microsoft.com/en-gb/excel-help/overview-of-formulas-HP010342750.aspx" target="_blank">Overview of formulas.</a>
+    <p>The YouTube video below demonstrates how to set up your intial column of latitudes and apply a function called RADIANS() to convert the latitude values in column A (entered in degrees) to radians in column B.</p>
+    <p align= "center"><iframe width="420" height="315" src="//www.youtube.com/embed/NpywOEhkKVk" frameborder="0" allowfullscreen></iframe></p>
+    <p>There is a strict syntax that needs to be used when entering formulae, and you should use brackets frequently to make sure that the formula entered is evaluated as you want it to be. The correct syntax for entering the 1967 Theoretical Gravity Formula is shown below; <br><br><font size="2">= 978031.85 * (1 + ((0.005278895 * (SIN(B2))^2))  +  (0.000023462 * (SIN(B2))^4))</font></p>
+    <p>In this formula SIN calls the trigonometric Sine function, and in this case it returns the Sine of the value stored in cell B2. So the B2 here is the cell reference, not a value itself, and in this case will refer to the latitude (in radians) of the station for which you wish to calculate the theroretical "standard" gravity for.</p>
+    <p>You can embed the RADIANS function within the formula to convert your latitude values, which are stored in column A, to radians directly, as shown below;<br><br><font size="2">= 978031.85 * (1 + ((0.005278895 * (SIN(RADIANS(A2)))^2))  +  (0.000023462 * (SIN(RADIANS(A2)))^4))</font></p>
+    
+    <p> In the example layout shown below the latitude values (in degrees) are stored in column A, and have been converted to radians in column B using the RADIANS function, e.g. =RADIANS(A2). The theoretical gravity formula is then used to calculate the theoretical gravity value, gt, for each latitude using the appropriate formula. In the example below the formula is applied to cell C2 (red circle) of column C and refers to the latitude values in radians stored in column B.
+    </p>
+     <p><img src="lab1/formula_input_scrn.png" width="580" alt="formula entry screen capture" /></p>
+     <br><br>
+    <!--<p align= "center"><iframe width="420" height="315" src="//www.youtube.com/embed/P7UBzTU1nck" frameborder="0" allowfullscreen></iframe></p>
+    --><!-- end .content --></div>
+    
+    <div class="sidebar2">
+      <h3>Note 1.1</h3>
+      <p>See Lillie, Chapter 8, page 226...  </p>
+       <h3>Note 1.2</h3>
+      <p>You will have to convert the latitude values (in degrees) to radians. You can do this using the RADIANS function in Excel. Eg. Use RADIANS(A2), where A2 refers to the cell with the latitude value in degrees.</p>
+      <p>To convert degree values to radians by multiplying degrees by &Pi;/180, use the Excel function that returns a value for &Pi;, e.g. =A2*(PI()/180) as in the example below.</p>
+       <h3>Note 1.3</h3>
+       <p>To apply the formula in cell C2 to other cells in column C, click cell C2 to highlight it, then select the wee black square on the lower right of the cell and drag it downwards and release. This will automatically apply the formula to other cells and increment the cell reference properly. <p>You must have values in column A (or B if your formula refers to column B) on each new row you want to propogate the formula to, or the formula will not work properly, as it will look for a value in column A (or B) for each new row.</p></p>
+       <!-- end .sidebar2 --></div>
+
+   <div class="content">    
+    <h2>Task 2</h2>
+    <p><i>Plot a a simple x-y scatter graph using Excel which illustrates how the theoretical gravity values calculated in Task 1 vary with latitude, i.e. plot gt on the y-axis and values for latitude (degrees) on the x-axis.</p>
+    </i>
+    <p>Excel can be used to plot a bewildering array of graphs, or charts as they are refered to in Excel. In this laboratory we want to plot a simple x-y graph with the latitude values (in degrees) on the x-axis and the calculated theoretical gravity value on the y-axis. This is best done using the x-y Scatter plot option/style of chart. </p>
+    <p>If you are unfamiliar with plotting graphs using Excel a useful online tutorial and reference is: <a href="http://office.microsoft.com/en-gb/excel-help/create-a-chart-from-start-to-finish-HP010342356.aspx?CTT=1" target="_blank">Create a chart from start to finish.</a>
+    
+    <p><p>The YouTube video below demonstrates how to plot a simple x-y scatter plot using Excel;</p>
+    <p align= "center"><iframe width="420" height="315" src="//www.youtube.com/embed/tYXi0kuCr5I" frameborder="0" allowfullscreen></iframe></p>
+    <br><p>
+    <img src="lab1/x-y_graph.png" width="580" alt="formula entry screen capture" />
+    </p> 
+    <!-- end .content --></div>
+      
+      <div class="sidebar2">
+      <h3>Note 2.1</h3>
+      <p>Use the simple <b>x-y Scatter chart</b> option, rather than the x-y Line chart. The x-y Line option does weird things sometimes that are annoying and frustrating, to me at least :-). </p>
+      <br><br><h3>Note 2.2</h3>
+      <p>Experiment with the <a href="http://office.microsoft.com/en-gb/excel-help/create-a-chart-from-start-to-finish-HP010342356.aspx#_Toc255902076" target="_blank">chart layout tools</a> to practice formatting the elements of your graph. Set scale, axis title style, number format etc. Default styles in Excel are awful, in my opinion :-).</p> 
+       <!-- end .sidebar2 --></div>
+       
+    <p><div class="content">    
+    <h2>Task 3</h2>
+    <p>
+    <i>Calculate (using the Excel AVERAGE function) an average theoretical gravity value for the Earth (the average of the gt values from Task 1) and the difference in gravity (in mGal) between the poles and the equator.</i></p>
+    </i>
+    <p>Built in <a href=" http://www.dummies.com/how-to/content/how-to-use-excels-insert-function-button.html" target="_blank">functions</a> in Excel can be used to calculate most standard statistics (and many other useful things). To calculate the average of a range of values stored in a single column in Excel you can use the AVERAGE function. e.g.;<p> =AVERAGE(C2:C20)</p></p>
+    <p>In this example the average of all the values in Column C, from Row 2 to Row 20, will be calculated, so C2:C20 means, "from Cell C2 to Cell C20".</p>
+     <br><p>
+    <img src="lab1/screen_grab_average.png" width="580" alt="average function screen capture" />
+    </p>
+    <p>The difference in gravity between the poles and the equator can be calculated by inserting a simple formula into a blank cell e.g.;</p>
+    <p>=C2-C20   <i>i.e. the difference between value in Cell C2 (g at pole)  and the value in Cell C20 (g at equator) </i></p>
+    <!-- end .content --></div>
+      
+      <div class="sidebar2">
+      <h3>Note 3.1</h3>
+      <p>Click once in an empty cell to select it (the next empty cell at the bottom of your column of gt values perhaps) and then type "=A" in the formula bar...Excel will automatically offer you the choice to pick the AVERAGE funtion.</p>
+      <br><br><h3>Note 3.2</h3>
+      <p>With the cursor placed between the two brackets, select the range of cells within your column of gt values (click-drag-release) and this range will be inserted into the function. In the example on the left the cells C2 to C20 were selected.</p> 
+       <!-- end .sidebar2 --></div></p>
+       
+    <p><div class="content">    
+    <h2>Task 4</h2>
+    <p>
+    <i>Show that an approximate value for dg/dR (the rate of change of gravity with increasing distance from the centre of mass of the Earth) is about -0.308 mGal/metre. Use the average gravity value you determined in Task 3, a sensible mean radius for Earth, R, and the formula (from page 227 of notes);</p>
+    
+     <p>                 dg/dR = -2g/R</p>
+
+     <p>Note that the rate of change of gravity with increasing distance is negative (i.e. the further away from the centre of mass of the Earth you are the smaller g is going to be).
+     </i></p>
+     <p>So, for example, if your average value of g was calculated and stored in Cell C25 of column C, and a value for R was in Cell C26, then the formula above could be typed (into an empty cell) as;</p>
+     <p>=-2*C25/C26   (take care to use values reflecting appropriate units, mGal for g and metres for R) </p>
+    
+    
+    <!-- end .content --></div>
+      
+      <div class="sidebar2">
+      <h3>Note 4.1</h3>
+      <p>For the value of "average g" in the formula, just use the value you have already calculated (Task 3) by refering to the appropriate cell reference.</p> 
+       <!-- end .sidebar2 --></div></p>
+       
+    <p><div class="content">    
+    <h2>Task 5</h2>
+    <p><i>
+     A gravity measurement was performed on land at the following field site;</p> 
+   <br><p>
+    <img src="lab1/lab1_site_cartoon.png" width="580" alt="average function screen capture" />
+    </p>
+    <h3><p>Terrain is undulating, low relief.</p>
+    <p>Latitude: 48.1195 N     Longitude: 3.5678 W</p>
+    <p>Elevation (ellipsoid height), h, 487.9 m</p>
+    <p>Observed gravity (go) is 980717.39 mGal</p></h3>
+
+     <p>
+     1.	Calculate the Free Air correction, FAC<br>
+     2.	Calculate the Bouguer correction, BC<br>
+     3.	Calculate the Free Air anomaly, gFA<br>
+     4.	Calculate the Bouguer anomaly, gBA<br>
+    </i></p>
+    <p>On land, the formula for the Bouguer Correction is;</p>
+    <p>BC =  2*&Pi;*G*rhoc*h</p>
+    <p>where <i>rhoc</i> is Bouguer crustal density, 2670 kg.m-3 and <i>h</i> is height above the ellipsoid surface.</p>
+    <p><i>G</i> is the <a href="http://en.wikipedia.org/wiki/Gravitational_constant" target="_blank">gravitational constant</a>, 6.67 x 10-11 N.m2.kg-2</p>
+    <!-- end .content --></div>
+      
+      <div class="sidebar2">
+      <h3>Note 5.1</h3>
+     <p>All the formulae you need for these calculations, and reference to the relevant pages in text book, are listed at the beginning of the Lab1 manual.</p> 
+    <h3>Note 5.2</h3> 
+    <p>Answers for gravity formulae using <a href="http://physics.nist.gov/cuu/Units/units.html" target="_blank">SI units </a> will be in units of m.s-2, multiply by 10^5 to convert answer to mGal.</p> 
+    <h3>Note 5.3</h3> 
+    <p>You will have to calculate the theoretical gravity value, gt, for the <b>precise</b> site latitude. <b>Tip:</b> Just use your gt column/formula you set up for Task 1, and insert the required latitude value in a new row.</p>
+       <!-- end .sidebar2 --></div></p> 
+       
+       
+    <p><div class="content">    
+    <h2>Task 6</h2>
+    <p><i>If the gravity station was at sea level (i.e. part of a marine gravity survey), and the depth of water, hw, beneath the site was 487.9 m, then assuming all other parameters are the same as in Task 5;</p>
+    <br><p>
+    <img src="lab1/lab1_seasite_cartoon.png" width="580" alt="average function screen capture" />
+    </p>
+    <p>   
+     1.	Calculate the Free Air correction, FAC<br>
+     2.	Calculate the Bouguer correction, BC<br>
+     3.	Calculate the Free Air anomaly, gFA<br>
+     4.	Calculate the Bouguer anomaly, gBA<br>
+  </i></p>
+    <p>At Sea, the formula for the Bouguer Correction is;</p>
+    <p>BC =  2*&Pi;*G*(rhow-rhoc)*hw</p>
+    <p>where <i>rhow </i>is sea water density, 1030 kg.m-3; <i>rhoc</i> is Bouguer crustal density, 2670 kg.m-3 and <i>hw</i> is depth of water.</p>
+    <p><i>G</i> is the <a href="http://en.wikipedia.org/wiki/Gravitational_constant" target="_blank">gravitational constant</a>, 6.67 x 10-11 N.m2.kg-2</p>
+    <p>Remember that the purpose of the Bouguer Correction is to account for the <b>mass</b> of any topographic deviations above or below our reference ellipsoid. On land topography is above the ellipsoid (apart from (quite?) a few <a href="http://en.wikipedia.org/wiki/List_of_places_on_land_with_elevations_below_sea_level" target="_blank" > areas on Earth that are below sea level</a>, but dry), and so the BC is a positive value that is subtracted, i.e. we subtract some amount from the measured and corrected Free Air anomaly. At sea the situation is different of course, because a) we are AT SEA LEVEL (assuming the boat is floating), and b) there is water between us and our gravimeter (in the boat) and the sea bed. So at sea the BC corrects for the missing rock, by effectively displacing the water and filling the gap with rock with a mean density of 2670 kg.m-3 (the standard Bouguer crustal density).</p>
+    <p>So at sea the BC value is a negative value (see formula), BUT WE STILL SUBTRACT IT from the Free Air anomaly following the standard equation/formula, but subtracting a negative number <b>adds</b> a component of gravity to the final Bouguer Anomaly.</p>
+    
+    <!-- end .content --></div>
+      
+      <div class="sidebar2">
+      <h3>Note 6.1</h3>
+      <p>Answers for gravity formulae using <a href="http://physics.nist.gov/cuu/Units/units.html" target="_blank">SI units </a> will be in units of m.s-2, multiply by 10^5 to convert answer to mGal.</p> 
+       <!-- end .sidebar2 --></div></p>  
+     
+  <div class="footer">
+    <p>These pages are designed to be used in conjunction with the Lab notes and required reading for each section of the course. Any feedback on how they may be improved would be appreciated. 
+    <a href="mailto:roderick.brown@glasgow.ac.uk?Subject=G4G%20Web%20Page%20Feedback" target="_top">Roderick Brown</a> </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
