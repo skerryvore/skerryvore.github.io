@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>GEOPHYSICS-4-GLASGOW Lab 3</title>
+
+<link href="css/g4g_style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+
+
+
+<div class="container">
+
+  <div class="header"><a href="#"><img src="geoimages/long_logo1.png" alt="Lab 3" name="CornerLogo" width="960" height="90" id="Insert_logo" style="background: #FFFFFF; display:block;" /></a> 
+
+    <!-- end .header --></div>
+
+  <!--<div class="sidebar1">-->
+
+  <div STYLE="float: left; width: 180px; background: #8AB8E6; padding-bottom: 5300px">
+
+    <ul class="nav">
+
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="g4g_lab1.html">Lab 1</a></li>
+
+      <li><a href="g4g_lab2.html">Lab 2</a></li>
+
+      <li><a href="g4g_lab3.html">Lab 3</a></li>
+
+      <li><a href="g4g_lab4.html">Lab 4</a></li>
+
+      <li><a href="g4g_lab5.html">Lab 5</a></li>
+
+    </ul>
+
+    <p> Click the menu above to navigate to resources for each Lab session. You will be able to download (click the appropriate icons on the top left) a pdf of the Lab notes and any Excel spreadsheet templates and/or solutions for each of the Lab sessions.</p>
+
+    <p> Please also read the relevant sections from the recommended reading as well as using these help pages for each Lab session.</p>
+
+    <!-- end .sidebar1 --></div>
+
+
+
+ 
+
+ <div class="content">
+
+     
+
+<!-- image rollover code by http://saypoint.blogspot.com 
+
+<a href="#" ><img src=" URL_IMG-1 " onmouseover="this.src=' URL_IMG-2 '" onmouseout="this.src=' URL_IMG-1' "  /></a>
+
+end rollover template -->
+
+    
+
+    <div class="fltrt">
+
+    <table width="209">
+
+      <tr>
+
+        <td width="71"><a href="lab3/Geophysics_Lab3_2014.pdf" ><img src="candy/PDF-Icon.png" onmouseover="this.src='candy/PDF-download.png'" onmouseout="this.src='candy/PDF-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+
+       <td width="122"><a href="lab3/L4_geophysics_lab3_data.xlsx" target="_blank"><img src="candy/Excel-Icon.png" onmouseover="this.src='candy/Excel-download.jpg'" onmouseout="this.src='candy/Excel-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+
+      </tr>
+
+      <tr>
+
+        <td><i>Lab notes</i></td>
+
+        <td><i>Lab data</i></td>
+
+      </tr>
+
+    </table>
+
+    <!-- end .fltrt --></div>
+
+    
+
+    <h1>Lab 3</h1><br>
+
+    <h2>&nbsp;</h2>
+
+    <h2>Gravity Modelling: Forward Modelling of Real Data, Isle of Mull &amp; North Sea case studies</h2>
+
+    
+
+      <p>
+
+       <img src="lab3/mull_geology_map.png" width="580" height="450" alt="mull geology map image"/>
+
+     </p>
+
+     <p>The objective of this lab session is to utilise both the geophysical and Excel expertise and skills you have learned in the first two lab sessions to interpret real gravity data.</p>
+
+      <p>This is best tackled by breaking the problem into three separate but related parts. The first part relates to processing and assessing the measured gravity observations, that is making the appropriate corrections and calculating the observed Free Air and Bouguer gravity anomalies. This is what we did in Lab 1.</p>
+
+	  <p>The second part involves constructing an appropriate geophysical model (here we'll use a simple model for a buried spherical object) that is able to predict the theoretical Bouguer anomaly at the same locations (positions along the projected transects) for which we have an observed value. This is what we did in Lab 2, using synthetic data.</p>
+
+	  <p>The final part of the excercise is to determine the "goodness of fit" of your model/s using a standard statistical approach (i.e. assess the size and distribution of the residuals and compare the RMSD with an estimate of the mean standard deviation on the observations) as we did in Lab 2 using the synthetic data example.</p>
+
+     
+
+  <!-- end .content --></div>
+
+       
+
+       <div class="sidebar2">
+
+       <h3>Reading</h3>
+
+       <p>Lillie, <i>Whole Earth Geophysics</i>, <a href="reading/Lillie_Chp8and9.pdf">Chapter 8</a> Gravity & Isostasy, p. 244-248.</p>
+
+       <!-- end .sidebar2 --></div>
+
+  
+
+   <div class="content">
+
+    <h2>Task 1</h2>
+
+    <p><i><p>Download the Mull gravity traverse data from Moodle. Note that there are 2 transects, one oriented NE-SW and one NW-SE. For each position in each transect calculate the Free Air anomaly and the Bouguer anomaly by applying the standard gravity corrections (as you did in Lab 1).</p><p> Note that for these data there is a <a href="http://epsc.wustl.edu/~epsc454/grav-corrections.html" target="_blank">Terrain Correction </a>term (provided in the data set). This should be added to your calculated Bouguer anomaly values. The terrain correction corrects for effcts arising because of local topographic effects (recall that the Bouguer Correction assumes that the topography is an infinite slab, this isn't the case of course and in rough terrain it is necessary to make a terrain correction as well).</p>
+
+
+
+<p>Lets, for now, assume that the gravity anomaly can be approximated by a single composite intrusion located beneath the centre of the main complex in the SE of the island. Use a simple model for a buried spherical body to estimate the radius, depth and average density of this body that is consistent with the observed Bouguer gravity anomaly. Ensure you determine the “goodness of fit” between your model and the data using appropriate statistical methods (e.g. assess distribution of residuals (Are they random and small?) and the RMSD vs mean Std. Dev. of measurements).</p></i></p>
+
+     <p align="middle">
+
+       <img src="lab3/mull_bouguer_anomaly_map1.png" width="580" height="580" alt="Mull Bouguer anomaly map"/></p>
+
+     <h3>Fig. 2: Isle of Mull Bouguer gravity anomaly map</h3></p>
+
+     <p>The first part of Task 1 is to process the observed gravity data. So you will need to calculate the theoretical gravity value for each station location (latitude) and then calculate the Free Air anomaly and the Bouguer anomaly for each station location. </p>
+
+     <p>For the second part of the task we will have to set up a spherical object model so we can predict the model Bouguer anomaly along the two transects assuming that the intrusive complex can be approximated by a spherical body with a defined size, depth and density contrast. You should review how you did this for Lab 2 if you are unsure about how to go about this part.</p>
+
+     <p>Note though, that because we have TWO orthogonal transects with DIFFERENT x-spacings between each station you will have to calculate the model values separately for each transect.</p>
+
+     <p>This is a real data set, for a real geological problem...so there is no correct answer. So you will have to use all the information we can gather to estimate sensible values for the model parameters, i.e. radius of sphere, depth of sphere and density contrast. Radius is fairly easy, just look at the geology map and estimate how big you think the central complex is. Depth is less straight forward, because this is what we're hoping to constrain using the gravity data...but a good place to start might be to make depth equal to twice the radius...i.e. you just bury the sphere so it's centre of mass is located one radius below the surface. The density contrast is also open to interpretation...start by considering what kind rocks comprise the bulk of the intrusive complex and their likely densities (look at the table in the Lab manual for densities of common rocks, or use Google) what are the country rocks composed of? Take a look at the paper by <a href="reading/bott_and_tantrigoda_JGSL_v144_1987.pdf" target="blank">Bott and Tantrigoda (1987)</a> for some inspiration if you don't know where to start.</p>
+
+    <p>
+
+    <p>Once you have your two observed Bouguer anomaly transects pasted into a new worksheet (make sure you copy the x-distance columns for EACH transect too) you can setup your model. So the steps would be;</p>
+
+     <ul>
+
+      <li>1. Define your model parameters for radius, depth and density contrast.</li>
+
+      <li>2. Using the spherical model formula set up a separate column for each transect where you calculate the predicted Bouguer gravity value at each location.</li>
+
+      <li>3. Caclulate the residuals between the predicted and observed values for each transect.</li>
+
+      <li>4. Calculate the RMSD value between your model and the observations for each transect. The average RMSD (average of the two RMSDs) is a good value to use to decide on an overall "goodness of fit" between your model and both transects.</li>
+
+      <li>5. Adjust your three model parameters (radius, depth and density contrast) to attempt to find a model that fits the observations to an acceptable degree.</li>
+
+    </ul>
+
+    <p>The example layout below might be helpful.</p>
+
+     <p align="middle">
+
+       <img src="lab3/mull_model_summary.png" width="580" height="350" alt="Mull model summary"/></p>
+
+     <p><h4>Rules of thumb for interpreting the statistical "goodness of fit" between your model predictions and the observations;</h4></p>
+
+     <ul>
+
+      <li>1. Are the residuals small (i.e. less than the typical uncertainty on the observations? We want them to be small. Ideally we want them to all be zero, i.e. no difference between the model and the observations.</li>
+
+      <li>2. Are the residuals randomaly distributed? Any structure in the pattern of residuals is bad, it indicates where the model is having throuble fitting the data. Try and eliminate this, or think about what it means.</li>
+
+      <li>3. Is the Root Mean Squared Deviation (RMSD) smaller than the mean standard deviation of our obervations? If the RMSD is smaller than the uncertainty on the actual data it means our model predictions (on average!) are statistically the same as the observed values. This is rarely the case though, and an acceptable model may indeed have an RMSD that is greater than the mean standard deviation. It may be that your model design is just too simple, and so you cannot predict ALL the variance in the observations...hence a higher RMSD. Final decision is yours ultimately, and depends on what question/s you are trying to answer using the model. Use the RMSD as guide, we want to make it the smallest we can (target is zero), but the relative changes in the RMSD as you chnage model parameters is helpful too...if it gets smaller when you make a change you are improving the fit, if it gets larger you are making things worse. </li>
+
+    </ul>
+
+    <!-- end .content --></div>
+
+    
+
+    
+
+    
+
+    <div class="sidebar2">
+
+      <h3>Note 1.1</h3>
+
+      <p>Remember that you will have to correct the observed gravity measurements for location (use 1967 Theoretical Gravity formula) and make the Free Air and Bouguer corrections for each location. (review Lab 1 if you need to).</p>
+
+       <h3>Note 1.2</h3>
+
+      <p>Data are provided for two orthogonal transects across the main positive Bouguer anomaly on Mull. These data were extracted from the <a href="http://www.bgs.ac.uk/products/geophysics/landGravity.html" target="blank">UK gravity dataset</a> by projecting point data (grey dots on map) along a 5km wide traverse along each transect (black lines). </p>
+
+      <p><br /><br /><br /><p><br /><br /><br /> <p><br /><br /><br /><p><br /><br /><br />
+
+      <h3>Note 1.3</h3>
+
+      <p>You will find it much more convenient when completing the second part of this task if you copy the observed Bouguer anomaly values and the appropriate distances (i.e. two columns, the X-values and the BA values) for each transect to a new Excel worksheet where you can carry out the modelling part of the task.</p>
+
+      <h3>Note 1.4</h3>
+
+      <p>Our model is only able to represent the complex with a single average density contrast...and rocks have a range of <a href="lab3/Densities_of_Typical_Rock_Types_and_Minerals.pdf" target="blank"> densities</a>. So use your geological 'nouse' and common sense to establish a sensible range of possible values.
+
+      <br /><h3>Note 1.5</h3>
+
+      <p>Our model assumes a zero regional background Bouguer anomaly value, so if there is a non-zero regional value (as there is here) you will need to add a fourth model parameter to your formula. Just add a fixed "offset" value, which will shift the predictions up or down by a fixed offset.</p>
+
+       <!-- end .sidebar2 --></div> 
+
+       
+
+          <div class="content">
+
+    <h2>Task 2</h2>
+
+    <p><i>A paper by Donato et al. (1983) (data and pdf version of paper available on Moodle) reported the results of a gravity study of an area in the North Sea. The authors have demonstrated that the Bouguer anomaly profile along their section B-B’ (Figure 7 in paper & below) is reasonably well matched by a conceptual model of a conical shaped granite body with a centre of mass located at roughly 7-8 km depth and a half width of roughly 6-8 km with a density contrast of negative 0.09 g.cm-3.</p>
+
+
+
+<p>Using your spherical model assess how well the observed data can be matched by the Bouguer anomaly predicted for a simple spherical shaped granite body, and determine its radius and depth (assuming a density contrast of -0.09 g.cm-3).</p>
+
+    </i></p>
+
+     <p align="middle">
+
+       <img src="lab3/donato_fig7.png" width="580" height="350" alt="Donato et al. Fig 7."/></p>
+
+     <h3>Fig. 3: Bouguer gravity anomaly measured along transect from the North Sea.</h3></p>
+
+     <p>Remember that here the density contrast of the buried object is NEGATIVE. You will also see that there is a significant positive regional background anomaly (or 8-9 mGal or so) so you will have to add an offset parameter to your model formula (as you would have done for Task 1). </p>
+
+     <p>Don't forget to calculate the statistical "goodness of fit" for your model by calculating the residuals (and inspecting them on a graph) and the RMSD and mean standard deviation on the measured/observed values.
+
+     <p align="middle">
+
+       <img src="lab3/donato_model.png" width="580" height="420" alt="Donato et al. Fig 7."/></p>
+
+    <!-- end .content --></div>
+
+    
+
+    
+
+    
+
+    <div class="sidebar2">
+
+      <h3>Note 2.1</h3>
+
+      <p>Here I have simply extracted the observed Bouguer gravity anomaly values from the figure (the red dots), so there is no need to make any corrections for tis task :-).</p>
+
+       
+
+      
+
+       <!-- end .sidebar2 --></div>        
+
+  
+
+     
+
+  <div class="footer">
+
+    <p>These pages are designed to be used in conjunction with the Lab notes and required reading for each section of the course. Any feedback on how they may be improved would be appreciated. 
+
+    <a href="mailto:roderick.brown@glasgow.ac.uk?Subject=G4G%20Web%20Page%20Feedback" target="_top">Roderick Brown</a> </p>
+
+    <!-- end .footer --></div>
+
+  <!-- end .container --></div>
+
+</body>
+
+</html>
+

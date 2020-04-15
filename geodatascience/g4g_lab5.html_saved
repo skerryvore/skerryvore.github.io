@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>GEOPHYSICS-4-GLASGOW Lab 5</title>
+<link href="css/g4g_style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="geoimages/long_logo1.png" alt="Lab 5" name="CornerLogo" width="960" height="90" id="Insert_logo" style="background: #FFFFFF; display:block;" /></a> 
+    <!-- end .header --></div>
+  <!--<div class="sidebar1">-->
+  <div STYLE="float: left; width: 180px; background: #8AB8E6; padding-bottom: 5200px">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="g4g_lab1.html">Lab 1</a></li>
+      <li><a href="g4g_lab2.html">Lab 2</a></li>
+      <li><a href="g4g_lab3.html">Lab 3</a></li>
+      <li><a href="g4g_lab4.html">Lab 4</a></li>
+      <li><a href="g4g_lab5.html">Lab 5</a></li>
+    </ul>
+    <p> Click the menu above to navigate to resources for each Lab session. You will be able to download (click the appropriate icons on the top left) a pdf of the Lab notes and any Excel spreadsheet templates and/or solutions for each of the Lab sessions.</p>
+    <p> Please also read the relevant sections from the recommended reading as well as using these help pages for each Lab session.</p>
+    <!-- end .sidebar1 --></div>
+
+ 
+ <div class="content">
+     
+<!-- image rollover code by http://saypoint.blogspot.com 
+<a href="#" ><img src=" URL_IMG-1 " onmouseover="this.src=' URL_IMG-2 '" onmouseout="this.src=' URL_IMG-1' "  /></a>
+end rollover template -->
+    
+    <div class="fltrt">
+    <table width="209">
+      <tr>
+        <td width="71"><a href="lab5/Geophysics_Lab5_2014.pdf" ><img src="candy/PDF-Icon.png" onmouseover="this.src='candy/PDF-download.png'" onmouseout="this.src='candy/PDF-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+        <td width="122"><a href="lab5/tibet_gravity_data_combined.xlsx" target="_blank"><img src="candy/Excel-Icon.png" onmouseover="this.src='candy/Excel-download.jpg'" onmouseout="this.src='candy/Excel-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+      </tr>
+      <tr>
+        <td><i>Lab notes</i></td>
+        <td><i>Lab data</i></td>
+      </tr>
+    </table>
+    <!-- end .fltrt --></div>
+    
+    <h1>Lab 5</h1><br><br />
+    <p><h2>How is the high topography of the Himalaya and Tibetan Plateau supported at depth? </h2></p>
+<h2>&nbsp;</h2>
+
+     
+       <table width="580">
+  <tr>
+    <td> <img src="lab5/wgm2012_topography_map.png" width="270"  alt="mountain range cartoon image"/></td>
+    <td> <img src="lab5/gravity_transect_map.png" width="270" alt="mountain range cartoon image"/></td>
+  </tr>
+  <tr>
+    <td> <img src="lab5/wgm2012_free_air_map.png" width="270"  alt="mountain range cartoon image"/></td>
+    <td> <img src="lab5/wgm2012_bouguer_map.png" width="270"  alt="mountain range cartoon image"/></td>
+  </tr>
+</table>
+  
+     <p>This lab/assessment provides an opportunity to use the knowledge, techniques and forward modelling approach we have covered in the previous lab sessions, reading and during lectures on a real world example. In this case the aim of the lab session is to use the semi-infinite slab approximation model to help interpret measured gravity data extracted from three parallel transects across the Himlaya-Tibet mountain front.</p>
+     <p>The key question we want to address here is; How is the topography of the Himalaya-Tibet mountain range is supported at depth?</p>
+     <p>The key to tackling the modelling part of this lab/assessment is to recognise that it is essentially an extension/adaption of what we did in Lab 4, but in this case we have real data, not synthetic data.</p>
+    
+ 
+  <!-- end .content --></div>
+       
+       <div class="sidebar2">
+       <h3>Reading</h3>
+       <p>Lillie, <i>Whole Earth Geophysics</i>, <a href="reading/Lillie_Chp8and9.pdf">Chapter 8</a> Gravity & Isostasy, Read/review these sections: <p>Isostasy p. 237-243; <p>Semi-infinite slab model p. 248-250; <p>Example of mountain problem p. 257-259.</p>
+       <!-- end .sidebar2 --></div>
+       
+  <div class="content">
+    <h2>Task 1</h2>
+    <p><i><p>Down load the observed gravity data for the three transects (lines 1, 2 and 3) from the Moodle site. These are provided individually (one line per file) and also as a combined file (one file, each line on a separate workbook page). These data were extracted from the WGM2012 data set which a high resolution global dataset of Earth's gravity anomalies (Bouguer, isostatic and surface free-air), computed at global scale in spherical geometry. See the BGI website for further details; <a href=" http://bgi.omp.obs-mip.fr/data-products/Grids-and-models/wgm2012"> http://bgi.omp.obs-mip.fr/data-products/Grids-and-models/wgm2012 </a>
+
+<p>The raw gravity data have been processed following the standard procedures you used in previous labs to calculate the Free Air and Bouguer anomalies. For each transect the mean gravity anomalies (and the calculated standard deviation) were extracted from 20km wide (measured at right angles to the transect line) and 5km long (measured along line of transect) windows along the line of the transect. This yields estimates of the gravity anomalies and the standard deviation at 5km intervals along each profile.
+
+<p>Inspect the gravity anomaly profiles for each line by plotting graphs of the anomaly values and the topography (adjust the scale of the topography as required so you can plot the curves on one graph) on the y-axis versus centre distance on the x-axis. Compare the shape and magnitude of the anomalies with respect to the topography (i.e. elevation) for each transect. 
+
+<p>Compare the observed anomalies for the Himalaya-Tibet mountain range to those analysed in the previous lab session for a mountain in Airy isostatic equilibrium.
+</p></i></p>
+    <!-- end .content --></div>
+    
+     <div class="content">
+    <p>You will see on inspection of the data files that the raw gravity data has already been processed, and the Free Air and Bouguer gravity anomaly values are provided along with an estimate of the standard deviation for these estimates.</p>
+    <p>The first part of any analysis is clearly to inspect and understand the data you have available. So in this case it would be a good idea to draw graphs of the Free Air and Bouguer anomaly data along each of the three transects (line 1, line 2 and line 3) as well as the topography along these transects (see topography profiles example below).</p>
+    
+    
+     <p>
+       <img src="lab5/topography_sections.png" width="580"  alt=" cartoon image"/>
+     </p>
+     <p><br /></p><p><br /></p>
+     <p><img src="lab5/gravity_transect_map.png" width="580" alt="mountain range cartoon image"/></p>
+     
+     
+    <!-- end .content --></div>
+    
+       <div class="sidebar2">
+      <h3>Note 1.1</h3>
+      <p>You should first assess/examine each transect separately by plotting the FAA and the BA profiles along with the topography (three sets of data) on the same x-y graph.</p>
+      <p>Then you might consider calculating and viewing the average FAA and BA for the three transects. Using the average of the three transects would "smooth" out some of the details, but this may be useful given that our model is very simple.</p>
+       <h3>Note 1.2</h3>
+      <p>The maximum topographic values on the plateau are circa 5000m while the maximum gravity anomaly values are much lower (circa 500 mGal), so it may be useful (essential?) to scale the topographic values so that you can see the variation/pattern of both clearly...i.e. divide the topographic values by 8 or 10 before plotting them on the graph.</p> 
+      <p><b>DO NOT</b> use these scaled elevation values for your modelling/calculations though, use the real topography!</p>
+       <!-- end .sidebar2 --></div>
+       
+       <div class="content">
+    <h2>Task 2</h2>
+    <p><i><p>Use an Airy isostatic model and a simplified crustal structure such as illustrated in the sketch below to calculate the thickness of the crustal root (hm) and the total crustal thickness (hM ) under the Tibetan Plateau assuming the surface topography is completely supported by the crustal root, i.e. it is in Airy isostatic equilibrium (ρc = 2.67, ρm =3.1, ρa = 0  all in g.cm-3).
+</p></i></p>
+
+
+ <p>
+       <img src="lab5/geophysical_model_sketch.png" width="580"  alt=" cartoon image"/>
+     </p>
+     
+     <p>You will need to estimate an appropriate height for the topography (h1=ha in the diagram here) from the actual data (look at your graphs of topography from Task 1...BUT, remember to use the ACTUAL values, not the scaled values.</p>
+      <p>You will also need to calculate the thickness of the crustal root, hm (h2=hm in the diagram here) assuming Airy-type local isostatic compensation. So setup and solve the simultaneous equations for equal height and equal pressure to obtain an expression for hm.</p>
+    <!-- end .content --></div> 
+    
+           <div class="sidebar2">
+      <h3>Note 2.1</h3>
+      <p>Make sure you include a sketch/diagram to illustrate your model structure (like the one shown here). If you need to review how the parameters of the semi-infinite slab model are defined re-read p. 248-250 of Chapter 8 of Lillie.</p>
+      
+      
+       <!-- end .sidebar2 --></div>
+       
+        <div class="content">
+    <h2>Task 3</h2>
+    <p><i><p>Use the semi-infinite slab approximation (see pages 250, 257 and 258, Chapter 8, Lillie) to model the Free Air gravity anomaly and the Bouguer gravity anomaly across the Himalaya-Tibet mountain front assuming a simple Airy isostatic model. It will be useful and convenient to set up your model so that the x-distance intervals match those in the observed datasets (i.e. -300 t0 400 km with intervals of 5km).
+
+<p>Test your model predictions of the BA and FAA by comparing the model anomalies with the observed anomalies along each of the three transects, lines 1, 2 and 3. You could do this by testing your model against each transect separately.
+
+<p>Given that our model design is very simple, you may also want to investigate whether an "average model", i.e. a model that attempts to fit the mean of the observations calculated across all three lines. That is calculate the mean Free Air anomaly and the mean Bouguer anomaly (based on the three transect values available) and fit a simple model to these mean values. Averaging the observations made along the three transects will "smooth" some of the variation arising from spatial differences in density, topography etc.
+
+<p>Ensure that you calculate the Root Mean Square Deviation (RMSD), i.e. the average misfit between your model predictions and the observations, for each model you test and compare this with the mean standard deviation on the observations for the transect. 
+
+<p>Also, make sure you plot a set of suitable graphs to illustrate the observed anomaly data, topography and your model results for each transect/line, ensuring that a plot of the residuals is also included to aid the evaluation and assessment of the model.
+
+</p></i></p>
+
+
+ <p>
+       <img src="lab4/semi_infinite_slab_geometry.PNG" width="580"  alt=" cartoon image"/>
+     </p>
+     
+     <p>This task/section essentially requires the same  approach we took in Lab 4, so review your spreadsheet/model/notes for <a href="geopixel.co.uk/g4g_lab4.html"> Lab 4</a> to refresh your memory on how to set-up the semi-infinite slab model if you need to.</p>
+    <!-- end .content --></div> 
+    
+           <div class="sidebar2">
+      <h3>Note 3.1</h3>
+      <p>Model details are in Lillie, Chapter 8, p. 248-250.</p>
+      
+      
+       <!-- end .sidebar2 --></div>
+       
+        <div class="content">
+    <h2>Task 4</h2>
+    <p><i><p>
+   
+   <ul> 
+  <li> Read the four papers discussing the gravity and structure of the Himalaya-Tibetan Plateau listed on Moodle (Braitenberg et al. 2000; Cattin et al. 2001, Jordan and Watts, 2005 and Jin and McNutt, 1996).
+
+<li>Compile all the outputs from the tasks 1 to 3 (include a simple sketch for your model design (from Task 1), and you must show your workings for the calculation of hm and hM in Task 1) into a brief report (not more than 1500 words).
+
+<li>Discuss how your model performed and how it enabled (or otherwise) the interpretation of the observed gravity data, and the implications of your model for the state of isostatic compensation of the Himalayan-Tibetan mountain front.
+
+<li>Explicitly discuss, and quantify using the appropriate statistics, how well your model fitted the observed data and whether, and to what extent, a model of local (Airy type) versus regional (flexural) isostasy is applicable to explaining how the topography of this mountain chain is supported. 
+
+<li>Comment/discuss your results/conclusions in light of those reported/discussed in the literature (i.e. the four papers indicated above).
+
+</ul>
+
+</p></i></p>
+
+     
+     <p><b>Please note that the deadline for submission of the assessment report is 1000 Monday 1st Dec 2014.</b></p>
+    <!-- end .content --></div> 
+    
+           <div class="sidebar2">
+      <h3>Note 4.1</h3>
+      <p>Please read the comment/advice <a href="lab5/Notes_for_CA_assignment.pdf"> notes </a> concerning the assessment as it contains information about WHAT to include in your report, and how to go about it.</p>
+      
+      
+       <!-- end .sidebar2 --></div>
+     
+  <div class="footer">
+    <p>These pages are designed to be used in conjunction with the Lab notes and required reading for each section of the course. Any feedback on how they may be improved would be appreciated. 
+    <a href="mailto:roderick.brown@glasgow.ac.uk?Subject=G4G%20Web%20Page%20Feedback" target="_top">Roderick Brown</a> </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

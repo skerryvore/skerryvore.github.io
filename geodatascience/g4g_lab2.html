@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>GEOPHYSICS-4-GLASGOW Lab 2</title>
+<link href="css/g4g_style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="geoimages/long_logo1.png" alt="Lab 1" name="CornerLogo" width="960" height="90" id="Insert_logo" style="background: #FFFFFF; display:block;" /></a> 
+    <!-- end .header --></div>
+  <!--<div class="sidebar1">-->
+  <div STYLE="float: left; width: 180px; background: #8AB8E6; padding-bottom: 4000px">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="g4g_lab1.html">Lab 1</a></li>
+      <li><a href="g4g_lab2.html">Lab 2</a></li>
+      <li><a href="g4g_lab3.html">Lab 3</a></li>
+      <li><a href="g4g_lab4.html">Lab 4</a></li>
+      <li><a href="g4g_lab5.html">Lab 5</a></li>
+    </ul>
+    <p> Click the menu above to navigate to resources for each Lab session. You will be able to download (click the appropriate icons on the top left) a pdf of the Lab notes and any Excel spreadsheet templates and/or solutions for each of the Lab sessions.</p>
+    <p> Please also read the relevant sections from the recommended reading as well as using these help pages for each Lab session.</p>
+    <!-- end .sidebar1 --></div>
+
+ 
+ <div class="content">
+     
+<!-- image rollover code by http://saypoint.blogspot.com 
+<a href="#" ><img src=" URL_IMG-1 " onmouseover="this.src=' URL_IMG-2 '" onmouseout="this.src=' URL_IMG-1' "  /></a>
+end rollover template -->
+    
+    <div class="fltrt">
+    <table width="209">
+      <tr>
+        <td width="71"><a href="lab2/Geophysics_Lab2_2014.pdf" target="_blank"><img src="candy/PDF-Icon.png" onmouseover="this.src='candy/PDF-download.png'" onmouseout="this.src='candy/PDF-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+        <td width="122"><a href="lab2/synthetic_spherical_object_data.xlsx" target="_blank"><img src="candy/Excel-Icon.png" onmouseover="this.src='candy/Excel-download.jpg'" onmouseout="this.src='candy/Excel-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+      </tr>
+      <tr>
+        <td><i>Lab notes</i></td>
+        <td><i>Lab data</i></td>
+      </tr>
+    </table>
+    <!-- end .fltrt --></div>
+    
+    <h1>Lab 2</h1><br>
+    <h2>&nbsp;</h2>
+    <h2>Gravity Modelling: Forward Modelling of Synthetic Data</h2>
+      <p>
+       <img src="lab2/spherical_model.png" width="580" align="middle" alt="spherical model cartoon"/>
+    </p>
+    
+    <p>The objective of this laboratory session is to introduce the concept of forward modelling as a method of interpreting geophysical observations. This will involve implementing a quantitative mathematical model that predicts the gravity effect arising from a spherical object buried at some depth beneath the surface.</p> 
+    <p>We will use Excel to implement the model using formulae and also to display the observed data (in this case synthetic) and the model predictions simultaneously. You might benefit from reviewing some of the online <a href="http://office.microsoft.com/en-gb/excel-help/training-courses-for-excel-2013-HA104032083.aspx" target="_blank">training video tutorials<a>.</p>
+     </p>
+    
+  <!-- end .content --></div>
+       
+       <div class="sidebar2">
+       <h3>Reading</h3>
+       <p>Lillie, <i>Whole Earth Geophysics</i>, <a href="reading/Lillie_Chp8and9.pdf" target="_blank">Chapter 8</a> Gravity & Isostasy, p. 244-248.</p>
+       <!-- end .sidebar2 --></div>
+       
+  <div class="content">
+    <h2>Task 1</h2>
+    <p><i>Implement a model which predicts the Bouguer gravity anomaly measured at the surface along a transect across the centre of a buried spherical object (please review pages 244-248 in Chapter 8 of Lillie for additional details).</i></p>
+    <p>The key to this task is understanding how to enter a formula and to define named variables to refer to the fixed model parameters. If you are unfamiliar with how to do this in Excel, this is a very helpful online tutorial: <a href="http://office.microsoft.com/en-gb/excel-help/define-and-use-names-in-formulas-HA010342417.aspx#BMquickly_name_a_cell_or_range_of_cells" target="_blank">Defining Variable Names.</a> The YouTube video below also demonstrates how to do this for this laboratory task.
+    
+    <p>In the equation, or formula, we are using (see below) there are three "fixed" parameters (radius, R, depth, z; and density contrast, &Delta;&rho;) and one variable parameter (distance, x). The three parameters that define the spherical object are "fixed" in the sense that for each model we will choose a fixed radius, a fixed depth and a fixed density contrast value and then calculate gz for a range of x positions along the transect. So, for each instance of the model the "fixed" parameters do not change and the variable parameter does.    
+    <p>
+       <img src="lab2/equation1.png" width="580" height="270" alt="excel screen grab image"/>
+     </p>
+    <p>The formula allows us to calculate the gravity effect &nbsp;of the chosen object (i.e. the Bouguer anomaly arising because of this object), as measured at the surface, at any specified distance, x. So, we need to calculate this value many times, once for each new x position along the transect. The easiest way to set this up in Excel is to enter a range of x-positions, spaced regularly along the transect, into a single column within Excel and then use the formula to calculate gz for each x-position and store this value in an adjacent column.</p>
+    <p>The YouTube video below demonstrates how to set up the formula and define variable names in Excel for this laboratory sesssion.</p>
+    <p align= "center"><iframe width="420" height="315" src="//www.youtube.com/embed/P7UBzTU1nck" frameborder="0" allowfullscreen></iframe></p>
+    <p>So, to predict the Bouguer gravity anomaly along a transect measured along the surface that crosses over the exact centre of the sphere we simply need to use the formula to calculate the gz value at a set of points or distances (x) along the transect. This is why the distance parameter is variable, we want this parameter to vary while keeping the other three parameters fixed.</p>
+    
+     <p>
+       <img src="lab2/excel_clip1.png" width="580" height="350" alt="excel screen grab image"/>
+     </p>
+    <!-- end .content --></div>
+    
+    
+    
+    <div class="sidebar2">
+      <h3>Note 1.1</h3>
+      <p>See Lillie, Chapter 8, page 247. </p>
+       <h3>Note 1.2</h3>
+       <p>Be careful with units here. The formula as written here predicts values of (del)gz in units of mGal, but ALL the length parameters (R, x and z) need to be in metres, and the density contrast in units of g/cm^3. </p>
+       <h3>Note 1.3</h3>
+      <p>Plot the predicted values of gz for each location x on an x-y scatter graph. Plot the distance x, along the x-axis and the gravity values, gz, along the y-axis.</p>
+      
+       <h3>Note 1.4</h3>
+       <p>On your graph, it is useful to fix the minimum and maximum values on the y-axis scale, rather than letting these be set automatically. This is because it is easier to assess how your model changes when you adjust/modify the fixed parameters. To do this double click the y-axis and then edit the scale settings.</p>
+       <!-- end .sidebar2 --></div>
+
+   <div class="content">    
+    <h2>Task 2</h2>
+    <p><i>To evaluate how the predicted gravity anomaly changes when each of the three "fixed" model parameters is adjusted, it is useful to examine a series of models where we change only one model parmeter at a time. Use your model to plot graphs to illustrate the predicted Bouguer gravity anomaly profile along the transect for the following conditions (see notes) and make notes about the relative amplitude and shape of the anomaly for and between each example. </i></p>
+    </i>
+    <p>The objective of this task is simply to test your model and examine how it behaves when you change the values for radius, density or depth. Rather than doing this in a random fashion, or just mechanically going through the list of settings suggested in the lab notes, you will get the most out of this task by looking and thinking about the formula along with the changes. You should be able to predict how the model will change BEFORE you even change the parameters. </p>
+    <p>If you are unfamiliar with plotting and formatting graphs using Excel a useful online tutorial and reference is: <a href="http://office.microsoft.com/en-gb/excel-help/create-a-chart-from-start-to-finish-HP010342356.aspx?CTT=1" target="_blank">Create a chart from start to finish.</a>
+    <br>
+    
+   
+    <!-- end .content --></div>
+      
+      <div class="sidebar2">
+      <h3>Note 2.1</h3>
+      <p>If you want to save copies of each of the models in this task for reference, you could copy and paste each graph to a separate Word document.</p>
+      
+      
+       <!-- end .sidebar2 --></div>
+       
+        <div class="content">    
+    <h2>Task 3</h2>
+    <p><i>Down load the spherical model synthetic data from the Moodle site. The data are provided as a simple ascii text file (no formatting) and as an Excel file. The simplest way to open the ascii text file is to click the link, then select and copy the data (make sure you select ALL the columns and headings) and then paste this into an empty Excel workbook page (use Paste Special - >Ascii text ). Or simply download the Excel format file and open this.</i>
+    </p>
+     <p><i>Use the forward model you developed for Task 2 above to estimate the depth and radius of a spherical object that is consistent with the observed gravity data (initially, assume a density contrast of 0.33 g.cm^3).
+    </i></p>
+     <p>The aim of this task is to USE your model to interpret a set of "observed" data. In order to do this you will have to plot the observed data on the same graph as your model, so that you can visually assess how well your model fits the observations as you adjust the parameters.</p>
+     <p>However, in addition to visually assessing the fit of the model to the data, we are also going to calculate the "goodness of fit" using standard statistics.</p>
+     <p>In order to assist your visual assessment of the fit it is useful to plot lines indicating the scale of the uncertainty on your observations, i.e. the standard deviation. This can be done easily by adding two additional columns to your spreadsheet, one where you add 2x the standard deviation to the mean value for a site, and another where you subtract 2x the standard deviation from the mean value. We use twice the standard deviation because the probability of the true value falling in the range between +/- 2x standard deviations of the mean is 95%.
+     <p>We also need to plot a suitable graph to enable us to inspect the residuals in order to evaluate how well our model is working. In the example layout shown below I have plotted the residuals on a separate x-y scatter graph placed below the model so it can be easily seen along with the predicted gz plot.</p><p>Click the image to see an enlarged view. </p>
+     <p> <a href="lab2/Template_lab2.png" target="_blank">
+      <img src="lab2/Template_lab2.png" width="580" alt="model layout template"  style="width:580px;border:0">
+       </a>
+       </p>
+    <!-- end .content --></div>
+      
+      <div class="sidebar2">
+      <h3>Note 3.1</h3>
+      <p>In this task the "observed" data are synthetic, i.e. they have been made up. Some additional random noise has been added to the values to imitate real data.</p>
+       <h3>Note 3.2</h3>
+      <p>When calculating the statistics for the model fit you will have a residual value for each location (i.e. each x value) but when you calculate the Root Mean Squared Deviation (RMSD) there is only ONE value that applies to the whole model.</p><p>The RMSD represents the average misfit between your model predictions and the actual observations determined for ALL your data locations.</p>
+      <p>A reasonable or acceptable model is one where the RMSD value is less than, or similar to, the average standard deviation of your observed data.</p>
+      
+      
+       <!-- end .sidebar2 --></div>
+     
+  <div class="footer">
+    <p>These pages are designed to be used in conjunction with the Lab notes and required reading for each section of the course. Any feedback on how they may be improved would be appreciated. 
+    <a href="mailto:roderick.brown@glasgow.ac.uk?Subject=G4G%20Web%20Page%20Feedback" target="_top">Roderick Brown</a> </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>

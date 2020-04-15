@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>GEOPHYSICS-4-GLASGOW Lab 4</title>
+<link href="css/g4g_style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="geoimages/long_logo1.png" alt="Lab 4" name="CornerLogo" width="960" height="90" id="Insert_logo" style="background: #FFFFFF; display:block;" /></a> 
+    <!-- end .header --></div>
+  <!--<div class="sidebar1">-->
+  <div STYLE="float: left; width: 180px; background: #8AB8E6; padding-bottom: 7000px">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="g4g_lab1.html">Lab 1</a></li>
+      <li><a href="g4g_lab2.html">Lab 2</a></li>
+      <li><a href="g4g_lab3.html">Lab 3</a></li>
+      <li><a href="g4g_lab4.html">Lab 4</a></li>
+      <li><a href="g4g_lab5.html">Lab 5</a></li>
+    </ul>
+    <p> Click the menu above to navigate to resources for each Lab session. You will be able to download (click the appropriate icons on the top left) a pdf of the Lab notes and any Excel spreadsheet templates and/or solutions for each of the Lab sessions.</p>
+    <p> Please also read the relevant sections from the recommended reading as well as using these help pages for each Lab session.</p>
+    <!-- end .sidebar1 --></div>
+
+ 
+ <div class="content">
+     
+<!-- image rollover code by http://saypoint.blogspot.com 
+<a href="#" ><img src=" URL_IMG-1 " onmouseover="this.src=' URL_IMG-2 '" onmouseout="this.src=' URL_IMG-1' "  /></a>
+end rollover template -->
+    
+    <div class="fltrt">
+    <table width="209">
+      <tr>
+        <td width="71"><a href="lab4/Geophysics_Lab4_2014.pdf" target="_blank"><img src="candy/PDF-Icon.png" onmouseover="this.src='candy/PDF-download.png'" onmouseout="this.src='candy/PDF-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+       <td width="122"><a href="lab4/L4_geophysics_lab4_data.xlsx" target="_blank"><img src="candy/Excel-Icon.png" onmouseover="this.src='candy/Excel-download.jpg'" onmouseout="this.src='candy/Excel-Icon.png'" width="50" height="50" alt="some icon"/></a></td>
+      </tr>
+      <tr>
+        <td><i>Lab notes</i></td>
+        <td><i>Lab data</i></td>
+      </tr>
+    </table>
+    <!-- end .fltrt --></div>
+    
+    <h1>Lab 4</h1><br>
+    <h2>&nbsp;</h2>
+    <h2>Gravity & Crustal Structure: using the semi-infinite slab approximation to interpret gravity anomalies across a mountain range</h2>
+
+  <p>
+       <img src="lab4/mountain_section.png" width="580" height="350" alt="mountain range cartoon image"/>
+     </p>
+     <p>In the previous lab sessions we have focused on interpreting gravity anomalies that occur on a local scale (circa 10s km). The objective of this lab session is two fold. Firstly, it should help you to consolidate your understanding and practical skills at making standard gravity corrections to observed data. Secondly, we want to extend and advance the concept of forward modelling to be able to deal with gravity anomalies occurring over a much larger length scale (circa 100s km), such as those characteristic of passive continental margins or mountain ranges.</p>
+     <p>The geophysical aim is to be able to use forward modelling techniques to interpret gravity measurements to infer the nature of the crustal structure beneath these tectonic features, and specifically to assess the degree and style of isostatic compensation of surface loads acting on the crust, such as topography.</p>
+  <!-- end .content --></div>
+       
+       <div class="sidebar2">
+       <h3>Reading</h3>
+       <p>Lillie, <i>Whole Earth Geophysics</i>, <a href="reading/Lillie_Chp8and9.pdf">Chapter 8</a> Gravity & Isostasy, p. 248-250 and p. 257-259.</p>
+       <!-- end .sidebar2 --></div>
+       
+  <div class="content">
+    <h2>Task 1</h2>
+    <p><i><p>Implement a model which predicts the Free Air and Bouguer gravity anomalies measured at the surface along a transect across a mountain range (please review pages 248-250 and 256-260 in Chapter 8 of Lillie before/while attempting these tasks).</p></i></p>
+    
+    <p>The approach to setting up the semi-infinite slab model is very similar to the way we set up the model for a buried spherical object in Lab 2 and Lab 3. The key difference, of course, is that the geometry of the model is different, and so the parameters that define the shape of the object we are modelling are different. However, the way in which we design the layout within Excel is identical, i.e. we need a column of x-distances marking the positions along the transect where we will calculate the gravity anomaly values.
+    
+    <p>In this case start by setting up a model along a 500km long transect, from -250km to 250km with a spacing of 5km.</p>
+    <p>The equation we need is;</p>
+    
+     <p>
+       <img src="lab4/equation2.jpg" width="580"  alt=" cartoon image"/>
+     </p>
+	 <p>The x values in the equation above will be read from the column of distances. The three "fixed" parameters, i.e. delrho (density contrast of slab), delh (thickness of slab) and z (depth to centre line of slab...measured from the surface) should be defined as named variables.
+	 <p>
+       <img src="lab4/semi_infinite_slab_geometry.PNG" width="580"  alt=" cartoon image"/>
+     </p>
+     
+    <p>The key here is to recognise that we will need two separate semi-infinite slabs to represent our mountain gravity model. One for the topography of the mountain range, i.e. the topography above sea level, and a second one for the crustal root as a separate slab. Each slab can then be treated separately and independantly using the semi-infinite slab approximation formula.</p>
+    
+     <p>The syntax for implementing this equation for the slab representing the topography in Excel looks like this;</p>
+     
+    <p>=13.34*rhoc*height*(PI()/2+ATAN(E4/(height/2)))</p>
+    <p>Where "height" is my named parameter for the height of the topography, "rhoc" is the crustal density, and my distances were in column E. Note here I calculate the depth as height/2...because for the topography slab the depth to the center line of the slab is simply half the height. This is NOT the case for the depth to the centre line of the crustal root slab. Look at the cartoon/diagram above for the model geometry (also read/see Lillie, Chapter 8, page 249) if you are unsure about these values. The Excel function called "ATAN" returns the arctan and PI() returns the value of pi.</p>
+    <p>Note also that for this model ALL distances are in km (i.e. x-distance, height, and depth values), not metres, as they were for the spherical object model.</p>
+     <p>When calculating the density contrast for the slab representing the topography remember this is the density of the slab (here rhoc, as it is crust) minus the density of what surrounds it, in this case air. The topography is displacing air. So the density contrast of the topographic slab is 2.67-0=2.67 g.cm-3.</p>
+     <p>
+       <img src="lab4/topo_contribution.png" width="580"  alt=" cartoon image"/>
+     </p>
+     <p>When calculating the density contrast for the slab representing the crustal root remember this is the density of the slab (here it is also rhoc, as the crustal root is made of crustal material...hence we refer to it as...you know what I mean) minus the density of what surrounds it, in this case mantle (the crustal root extends down into the mantle and so is displacing mantle material). So the density contrast for the root is 2.67-3.1= -0.43 g.cm-3. Note it is a NEGATIVE desnity contrast. This is what gives rise to the positive (i.e. upward acting) bouyancy force that supports the topographic load (which acts downwards).</p>
+      <p>
+       <img src="lab4/root_contribution.png" width="530" alt="cartoon image"/>
+     </p>
+     
+     <p>Once you have calculated the gravity contributions for the two slabs separately, then the model <b>Free Air Anomaly</b> is simply the sum of these two contributions.</p>
+     <p>Note that the model <b>Bouguer Anomaly</b> is given exactly by the predicted gravity contribution of the crustal root alone. Remember that the purpose of making all the corrections to the observed gravity measurements is to <i>remove</i> the gravity effects of topography to end up with the Bouguer Anomaly...so the root contribution, on its own, <i>is </i> a model of the Bouguer Anomaly. </p>
+     <p>
+       <img src="lab4/combined_contributions.png" width="580" alt="cartoon image"/>
+     </p>
+     
+     
+    <!-- end .content --></div>
+    
+       <div class="sidebar2">
+      <h3>Note 1.1</h3>
+      <p>In this model we will need to set up <b>TWO</b> model columns, one to model the slab representing the topography and one to model the slab representing the crustal root.</p>
+       <h3>Note 1.2</h3>
+      <p>The parameters for slab thickness, density contrast and depth are <b>DIFFERENT</b> for each slab. The thickness of the topography slab is just the height of topography, and the depth is defined as the distance from the top of the topography down to the center line (i.e. middle) of the slab.</p> <p> You will have to <i>calculate </i>the thickness of the crustal root slab, hm. See notes in the manual and in Chapter 8 of the reading to ensure you know how to do this.</p> 
+       <!-- end .sidebar2 --></div> 
+    
+        <div class="content">
+<!-- Begin Task 2 -->		
+    <h2>Task 2</h2>
+    <p><i><p>a) Down load the synthetic mountain gravity data from the Moodle site, or from this page (top right Excel icon). The simplest way to achieve this is to select and download the Excel formatted file, or if you use the ascii text format from Moodle then open the link, highlight to select the text and copy the data (make sure you select ALL the columns and headings) and then paste this into an empty Excel workbook page (use Paste Special-> text).  Calculate the Free Air anomaly and the Bouguer anomaly for each of the station locations. This will require calculation of the appropriate theoretical gravity value at each station (use the 1967 standard formula, page 226, Chapter 8, Lillie as we did for Lab 1) and then calculating and applying the appropriate Free Air correction (i.e. FAC = 0.308*h mGal) and Bouguer Correction (BC = 0.112*h mGal) as required.</p>
+
+<p>b) Use a suitable semi-infinite slab model to test whether the mountain range (from where the data were obtained) is in Airy isostatic equilibrium or not. To do this adapt/copy your semi-infinite slab model from Task 1, and predict the Free Air and Bouguer anomalies at all stations where there are observed data using a simple 2-slab mountain model assuming that the mountain is in local Airy-type isostatic equilibrium (as described in the example shown in Chapter 8, page 256-260 in Lillie and implemented in Task 1 above).
+</p></i></p>
+     
+    
+    <p>The first part of this task is to process and correct the observed gravity data and calculate the Free Air and Bouguer anomalies for all locations. Essentially this is exactly the same procedure you will have used to process the Mull gravity data for Lab 3.</p>
+    <p>For the second part of the task, i.e. to set up a suitable model, just plagiarise your model that you created for Task 1 above. Be careful though if/when cutting and pasting columns that use formulae though, as the cell referencing and named variables used can get confused/corrupted...so check everything works as you intended.</p>
+    
+    <p>You should attempt to fit both the FAA and the BA values, as shown below.</p>
+     
+      <p>
+       <img src="lab4/synthetic_mountain_model.png" width="580" alt="cartoon image"/>
+     </p>
+     <p>And, don't forget to plot the residuals versus distance too, so you can assess whether there is any structure in the way these are distributed.</p>
+       <p>
+       <img src="lab4/synthetic_mountain_residuals.png" width="580" alt="cartoon image"/>
+     </p>
+    <!-- end .content --></div>
+    
+           <div class="sidebar2">
+      <h3>Note 2.1</h3>
+      <p>In this task we can use our model to fit both the FAA and the BA observations, and so you can calculate an RMSD "misfit" value by comparing your predicted FAA to the observed FAA values, and a second RMSD value by comparing the predicted BA to the observed BA values. Then you can simply use the average of these two RMSD values as a combined "misfit" value to assess the fit to both simultaneously.</p>
+   
+       <!-- end .sidebar2 --></div> 
+	   
+	   <!-- Begin Task 3 -->
+	       <h2>Task 3</h2>
+     <p><i>
+	 <p>Download the Elastic Plate Model example spreadsheet file (link top right of this page). Use this model of regional isostatic compensation to investigate how the lithosphere responds isostatically to loads of varying width (length) and for varying strengths (i.e. effective elastic thikness, Te, values). </p>
+     </i></p>
+    
+    <p>You can vary the width, height and density of the topographic load in the model by changing the values for these parameters in the spreadsheet. If you are interested in the "gory details" of the model and how it is coded in Excel please inspect the parameters, formulae and values in the grey cells (on left) and follow up with reading relevant pages from chapter 3 from Watts (2001)...reference details are in the spreadsheet.</p>
+    
+	<p>Example model of an ocean island, such as Hawaii (load height 5km, width 50km);</p>
+      <p>
+       <img src="lab4/elastic_plate_ocean_island.png" width="580" alt="ocean island elastic plate image"/>
+     </p>
+     <p>Example model of a mountain range (load height 31km (added curstal thickness due to orogenic shortening), width 500km);</p>
+       <p>
+       <img src="lab4/elastic_plate_mountain.png" width="580" alt="mountain elastic plate  image"/>
+     </p>
+    <!-- end .content --></div>
+    
+           <div class="sidebar2">
+      <h3>Note 3.1</h3>
+      <p>The strength of the lithosphere, and specifically how this effects the deflection of the Moho caused by surface loading and the isostatic compensation of the load, can be approximated using a model describing the beaviour of an infinite elastic plate. The elastic plate model provides a way of quantifying and understanding regional flexural isostatic compensation of surface loads. In the exterme case where the elastic plate is made to be very weak (i.e. very thin effective elastic thickness) this model is equivalent to the Airy local compensation model.</p>
+   
+       <!-- end .sidebar2 --></div> 
+     
+  <div class="footer">
+    <p>These pages are designed to be used in conjunction with the Lab notes and required reading for each section of the course. Any feedback on how they may be improved would be appreciated. 
+    <a href="mailto:roderick.brown@glasgow.ac.uk?Subject=G4G%20Web%20Page%20Feedback" target="_top">Roderick Brown</a> </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
